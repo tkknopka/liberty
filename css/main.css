@@ -1,0 +1,548 @@
+/* ------ Спецификация ------ */
+
+body {
+	font-family: 'Museo Sans Cyrl 300', sans-serif;
+	color: #6c7279;
+	padding: 0;
+	letter-spacing: 0em;
+	margin: 0;
+	font-size: 14px;
+}
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+p {
+	margin: 0;
+    font-size: 14px;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 58px;
+	font-family: 'Museo Sans Cyrl 700';
+}
+h2 {
+	font-size: 29.17px;
+	font-family: 'Museo Sans Cyrl 700';
+}
+h3 {
+	font-size: 23px;
+}
+h6 {
+	font-size: 19px;
+}
+a, a:hover, a:active {
+	text-decoration: none;
+}
+a, button, input {
+	transition: all 0.2s ease;
+}
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+{
+	outline: none;
+}
+.container {
+	padding: 0;
+}
+.btn {
+	margin: 0 auto;
+	padding: 10px 30px;
+	font-size: 17px;
+    font-family: 'Museo Sans Cyrl 700', sans-serif;
+    color: #3f4b60;
+    border: 2px solid #3f4b60;
+	background-color: #b2dce5;
+	border-radius: 5px;
+	text-align: center;
+	display: block;
+}
+.btn:hover {
+	background-color: #f1f1f3;
+	color: #3f4b60;
+	border: 2px solid #3f4b60;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.btn-cart {
+	position: fixed;
+	display: flex;
+	text-align: center;
+	right: 30px;
+	bottom: 45px;
+	padding: 15px 15px 15px 13px;
+	border-radius: 50%;
+	font-size: 25px;
+	background-color: #b2dce5;
+	color: #3f4b60;
+	border: 2px solid #3f4b60;
+}
+.btn-cart:hover {
+	background-color: #f1f1f3;
+	color: #3f4b60;
+	border: 2px solid #3f4b60;
+}
+.btn-cart:focus {
+    box-shadow: none;
+}
+.d-flex {
+	display: flex;
+}
+
+/* ------ Подключение шрифтов ------ */
+@font-face {
+    font-family: 'Museo Sans Cyrl 100';
+    src: url('../fonts/MuseoSansCyrl-100.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/MuseoSansCyrl-100.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/MuseoSansCyrl-100.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/MuseoSansCyrl-100.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/MuseoSansCyrl-100.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+@font-face {
+    font-family: 'Museo Sans Cyrl 300';
+    src: url('../fonts/museosanscyrl-300.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/museosanscyrl-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/museosanscyrl-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/museosanscyrl-300.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/museosanscyrl-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/museosanscyrl-300.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+@font-face {
+    font-family: 'Museo Sans Cyrl 700';
+    src: url('../fonts/MuseoSansCyrl-700.eot');
+    src: url('../fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-700.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+        url('../fonts/Museosanscyrl-700.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/MuseoSansCyrl-700.svg#MuseoSansCyrl-700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------ Первый экран ------ */
+
+.header {
+	background-blend-mode: multiply;
+	background: url(../img/Ассоль/Ассоль_1-min.jpg) no-repeat center top / cover;
+	background-color: rgba(77, 76, 77, 0.31);
+	color: #fff;
+    padding-bottom: 600px;
+	border-top: 1px solid #58647a;
+	height: 110vh;
+}
+.logo img {
+	max-width: 250px;
+}
+.nav-wrap {
+	padding-top: 26px;
+	padding-bottom: 26px;
+    margin-bottom: 92px;
+	background: #fff;
+	border-top: 5px solid #58647a;
+	border-bottom: 4px solid #c6cadf;
+	align-items: center;
+}
+.menu {
+	margin-top: 30px;
+	margin-right: 24px;
+}
+.menu__item {
+    font-size: 17px;
+    font-family: 'Museo Sans Cyrl 700', sans-serif;
+	color: #3f4b60;
+	padding-right: 30px;
+}
+.menu__item a {
+	color: #3f4b60;
+}
+.menu__item:first-child {
+	padding-left: 0px;
+}
+.menu__item:last-child {
+	padding-right: 0px;
+}
+.menu__item a:hover {
+	border-bottom: 2px solid;
+}
+.mobile-menu {
+	display: none;
+}
+.mobile-menu a {
+	color: #3f4b60;
+	font-size: 16px;
+}
+.mobile-menu a:hover {
+	font-weight: bold;
+	border-bottom: 0px solid;
+}
+/*-- Dropdown --*/
+.navbar-nav .dropdown {
+	padding-right: 30px;
+}
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+	position: absolute;
+}
+.dropdown-menu {
+	padding: 15px;
+	width: 250px;
+}
+/**/
+.contact {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0 0 -10px;
+}
+.contact a {
+	padding: 9px 0 0 0;
+	width: 157px;
+	color: #3f4b60;
+}
+.contact a:hover {
+	color: #9d9fb2;
+}
+.contact i {
+    color: #3f4b60;
+}
+
+.offer__title {
+	color: #f3efec;
+	text-shadow: 1px 1px 2px black;
+	margin-bottom: 12px;
+	letter-spacing: 0em;
+	line-height: 1.3em;
+}
+.offer__text {
+    color: #f3efec;
+    text-shadow: 1px 1px 2px black;
+    font-size: 29px;
+    font-family: 'Museo Sans Cyrl 100';
+	line-height: 1.32em;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+/* ------ Второй экран ------ */
+
+.kitchens {
+    padding: 52px 0 27px;
+	background: #f1f1f3;
+	text-align: center;
+}
+.kitchens h2 {
+    font-family: 'Museo Sans Cyrl 700';
+    color: #081d42;
+	text-align: left;
+	margin-bottom: 42px;
+}
+.kitchen {
+	text-align: left;
+	position: relative;
+}
+.kitchen__img img {
+	max-width: 550px;
+	width: 100%;
+}
+.kitchen__color {
+	align-items: center;
+}
+.kitchen__color p {
+	margin-bottom: 0;
+}
+.kitchen__letter {
+    font-size: 21px;
+    font-family: 'Museo Sans Cyrl 700';
+	color: #081d42;
+	font-weight: bold;
+	margin: 16px 0 8px;
+}
+.kitchen__letter_a {
+    font-size: 16px;
+    font-family: 'Museo Sans Cyrl 700';
+	color: #081d42;
+	font-weight: normal;
+	margin: 16px 0 8px;
+}
+.kitchen__letter_a img {
+	margin-right: 10px;
+}
+.kitchen__text {
+	color: #404048;
+	font-size: 14px;
+	padding-bottom: 62px;
+	letter-spacing: 0.02em;
+	line-height: 1.25em;
+}
+
+/* ------ Третий экран ------ */
+.moduls {
+    padding: 52px 0 27px;
+	background: #fff;
+	text-align: center;
+}
+.moduls h3 {
+    font-family: 'Museo Sans Cyrl 700';
+    color: #081d42;
+	text-align: left;
+	margin-bottom: 42px;
+}
+.modul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 42px;
+	margin-right: 12px;
+}
+.modul:last-child {
+	margin-right: 0px;
+}
+.modul__img {
+	height: 200px;
+	align-items: center;
+}
+.modul img {
+	max-width: 250px;
+	max-height: 200px;
+}
+.modul__text {
+	display: block;
+	margin-bottom: 10px;
+}
+.modul__price {
+	background: url(../img/подложка.png), url(../img/подложка2.png);
+	width: 200px;
+	padding: 10px;
+}
+.modul__price li:last-child {
+	font-weight: bold;
+	color: #be364a;
+}
+.isSale {
+	position: relative;
+}
+.isSale:before {
+    content: '';
+    display: block;
+    top: 48%;
+    left: 25%;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    -webkit-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+	background-color: #be364a;
+}
+.isSale img {
+	display: block;
+    top: -100%;
+    right: -10%;
+    position: absolute;
+    width: 45px;
+}
+
+/* ------ Подвал ------ */
+
+.footer {
+	padding: 0px 0 43px 0;
+	background-color: #1f2531;
+	line-height: 1.3em;
+	color: #94979c;
+	border-bottom: 5px solid #58647a;
+}
+.footer .logo {
+	margin-top: 35px;
+}
+.footer .contact {
+	padding-top: 35px;
+}
+.footer .contact a {
+	color: #9d9fb2;
+	text-decoration: #9d9fb2;
+}
+.footer .contact a:hover {
+	color: #ffffff;
+	text-decoration: #9d9fb2;
+}
+/* OC */
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0.91);
+    overflow: hidden;
+    display: none;
+}
+
+label.error {
+    font-size: 12px;
+    color: red;
+    position: absolute;
+}
+
+input.error {
+    border: 1px solid red !important;
+}
+
+input.valid {
+    border: 1px solid green !important;
+}
+
+#loader img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+}
+
+#overlay {
+display: none;
+position: absolute;
+width: 100%;
+height: 100%;
+background: #000c;
+left: 0px;
+top: 0px;
+cursor: pointer;
+}
+#thx {
+background: #fff;
+position: absolute;
+left: 50%;
+margin-left: -170px;
+top: 50%;
+padding: 30px;
+margin-top: -20px;
+}
+
+/* JQuery */
+
+/* Прелоадер 
+#p_prldr{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right:0;
+	bottom:0;
+	background: #b2dce5;
+	z-index: 30;}
+	 
+	.contpre small{font-size:25px;}
+	 
+	.contpre{
+	width: 250px;
+	height: 100px;
+	position: absolute;
+	left: 50%;top: 48%;
+	margin-left:-125px;
+	margin-top:-75px;
+	color:#fff;
+	font-size:40px;
+	letter-spacing:-2px;
+	text-align:center;
+	line-height:35px;}
+	 
+	#p_prldr .svg_anm {
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	background: url(../img/oval.svg) center center no-repeat;
+	background-size:41px;    
+	margin: -16px 0 0 -16px;}
+*/
+/* Media Queries */
+
+/* 1024 px - 1200px */
+@media screen and (max-width: 1200px) {
+
+}
+/* 992 px - 1024px */
+@media screen and (max-width: 1024px) {
+
+}
+/* 768 - 992 px */
+@media screen and (max-width: 992px) {
+	.container {
+		padding: 0px 16px;
+	}
+	.logo {
+		width: 80%;
+	}
+}
+
+/* 576 - 768 px */
+@media screen and (max-width: 768px) {
+	.header .logo img {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.menu__item a {
+	    font-size: 14px;
+	}
+	.footer .logo img {
+		width: 80%;
+	}
+	.footer {
+		padding-bottom: 60px;
+	}
+}
+
+/* 320 - 576 px */
+@media screen and (max-width: 576px) {
+	.nav-wrap {
+		padding-top: 16px;
+		padding-bottom: 16px;
+		margin-bottom: 92px;
+		background: #ffffff80;
+		border-top: 5px solid #58647a;
+		border-bottom: 0px solid;
+	}
+	.top-menu {
+		display: none;
+	}
+	.mobile-menu {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: -35px;
+		margin-left: 20px;
+	}
+	.mobile-menu a {
+	    font-size: 16px;
+	}
+	.dropdown-toggle::after {
+		display: none;
+	  }
+	.logo {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.menu {
+		flex-direction: column;
+	}
+	.offer__title {
+		font-size: 35px;
+	}
+	.bottom-menu {
+		text-align: center;
+	}
+	.contact {
+		margin: 0 auto;
+		text-align: center;
+		align-items: center;
+	}
+}
