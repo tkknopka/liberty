@@ -1181,25 +1181,39 @@
 					<form action="success.php" class="js-form" id="popupResult">
 					<div class="form-group">
 						<label for="recipient-name" class="col-form-label">Ваше имя:</label>
-						<input type="text" name="name" required placeholder="Введите имя" class="form-control" id="recipient-name">
+						<input type="text" name="name" required placeholder="Введите имя" class="form-control form__field" id="recipient-name">
 					</div>
 					<div class="form-group">
 						<label for="recipient-tel" class="col-form-label">Номер телефона:</label>
-						<input type="text" name="tel" required placeholder="Введите телефон" class="form-control" id="recipient-tel">
+						<input type="text" name="tel" required placeholder="Введите телефон" class="form-control form__field" id="recipient-tel">
 					</div>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Отправить заявку</button>
+					<button type="button" class="btn btn-primary act" data-submit>Отправить заявку</button>
 				</div>
 				</div>
 			</div>
+			</div>
+			<!-- Индикация процесса отправки формы -->
+			<div id="loader">
+				<img src="img/ripple.svg">
+			</div>
+			
+			<!-- Сообщение "спасибо" после отправки формы -->
+			<div id="overlay">
+				<div id="thx">
+					Спасибо! Мы обязательно вам перезвоним
+				</div>
 			</div>
 			</div>
 	
 		<script type="text/javascript" src="js/main.js"></script>
 		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		 <script src="js/jquery-3.4.1.min.js"></script>
+		 <script src="https://code.jquery.com/jquery-latest.js"></script>
+		<!-- Валидатор для проверки формы на заполненность  -->
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 		 <!-- Include all compiled plugins (below), or include individual files as needed -->
 		 <script src="js/bootstrap.min.js"></script>
 	</footer>
