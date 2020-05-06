@@ -44,32 +44,21 @@ $(document).ready(function() {
 
         el.validate({
             rules: {
-                tel: {
-                    required: true,
-                    regex: '^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$'
-                },
                 name: {
                     required: true
                 },
-                email: {
+                tel: {
                     required: true,
-                    email: true
-                },
-                question: {
-                    required: false
+                    regex: '^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$'
                 }
             },
             messages: {
-                tel: {
-                    required: 'Поле обязательно для заполнения',
-                    regex: 'Телефон может содержать символы + - ()'
-                },
                 name: {
                     required: 'Поле обязательно для заполнения',
                 },
-                email: {
+                tel: {
                     required: 'Поле обязательно для заполнения',
-                    email: 'Неверный формат E-mail'
+                    regex: 'Телефон может содержать символы + - ()'
                 }
             },
 
@@ -88,7 +77,7 @@ $(document).ready(function() {
                             })
                             .always(function(response) {
                                 //ссылка на страницу "спасибо" - редирект
-                                location.href = 'http://ruplast.pro/';
+                                location.href = 'https://tkknopka.github.io/liberty/';
                                 //отправка целей в Я.Метрику и Google Analytics
                                 //ga('send', 'event', 'masterklass7', 'register');
                                 //yaCounter27714603.reachGoal('lm17lead');
