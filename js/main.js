@@ -129,7 +129,7 @@ $(document).ready(function() {
             $img
                     .on('load',imgLoaded($img[0]))
                     .attr('src',src);
-        });
+        };
     };
  
  
