@@ -87,7 +87,7 @@ button, button:hover, button:focus, button:active
 	border: 2px solid #3f4b60;
 	z-index:10;
 }
-.btn-cart:hover, .btn-cart:active {
+.btn-cart:hover {
 	background-color: #f1f1f3;
 	color: #3f4b60;
 	border: 2px solid #3f4b60;
@@ -95,7 +95,7 @@ button, button:hover, button:focus, button:active
 .btn-cart:focus {
     box-shadow: none;
 }
-.btn-primary, .btn-primary:active {
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     background-color: #b2dce5;
     border-color: #3f4b60;
 }
