@@ -117,3 +117,22 @@ $(document).ready(function() {
     });
     
 });
+
+// lazy load
+    function loadimg(){
+        var $images = $('.img');
+ 
+        $images.each(function(){
+            var $img = $(this),
+                    src = $img.attr('data-src');
+ 
+            $img
+                    .on('load',imgLoaded($img[0]))
+                    .attr('src',src);
+        });
+    };
+ 
+ 
+    $(window).load(function(){
+        loadimg();
+    };
