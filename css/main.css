@@ -95,6 +95,11 @@ button, button:hover, button:focus, button:active
 .btn-cart:focus {
     box-shadow: none;
 }
+.btn-primary {
+    color: #fff;
+    background-color: #b2dce5;
+    border-color: #3f4b60;
+}
 .d-flex {
 	display: flex;
 }
