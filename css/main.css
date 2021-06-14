@@ -85,6 +85,7 @@ button, button:hover, button:focus, button:active
 	background-color: #b2dce5;
 	color: #3f4b60;
 	border: 2px solid #3f4b60;
+	z-index:10;
 }
 .btn-cart:hover {
 	background-color: #f1f1f3;
